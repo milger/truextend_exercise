@@ -13,7 +13,8 @@ class CollegeSearchPage
 
   def initialize
     # locators
-    @id_notification_counter = 'notificationCount'
+    @picklist_class = '.ui-picklist-options'
+    @pick_option_class = '.ui-picklist-option'
   end
 
   def click_start_searching()
@@ -22,9 +23,9 @@ class CollegeSearchPage
   end
 
   def add_multiple_locations(location_list)
-    location_options = page.find('.ui-picklist-options')
+    location_options = page.find(@picklist_class)
     for location_text in location_list
-      location_options.find('.ui-picklist-option', :text => location_text).click
+      location_options.find(@pick_option_class, :text => location_text).click
     end
   end
   
@@ -38,9 +39,9 @@ class CollegeSearchPage
   end
   
   def add_multiple_majors(major_list)
-    major_options = page.find('.ui-picklist-options')
+    major_options = page.find(@picklist_class)
     for mejor_text in major_list
-      major_options.find('.ui-picklist-option', :text => mejor_text).click
+      major_options.find(@pick_option_class, :text => mejor_text).click
     end
   end
   
