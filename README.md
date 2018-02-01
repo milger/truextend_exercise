@@ -1,2 +1,3 @@
-# truextend_exercise
-Simple ui test
+# TruextEnd exercise
+
+Simple ui test written in ruby and gherkins
